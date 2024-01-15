@@ -27,7 +27,7 @@ target_link_libraries(your_project/your_node udev)
 #include <libudev.h>
 #include "gamepadkey.h"
 
-
+//解码类型枚举
 enum DeviceType
 {
     NoDevice,

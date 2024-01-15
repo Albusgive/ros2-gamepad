@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rmer/Control_scheme/hongying_msg/install/hongying_ctrl_msg/local/lib/python3.10/dist-packages",
+        "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rmer/Control_scheme/hongying_msg/install/hongying_ctrl_msg/local/lib/python3.10/dist-packages",
+        "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
