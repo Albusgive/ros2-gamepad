@@ -37,6 +37,7 @@ enum DeviceType
     BEITONG
 };
 
+//手柄按键映射
 struct GamePadValues
 {
     int time = 0;
