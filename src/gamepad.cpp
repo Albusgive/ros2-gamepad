@@ -286,17 +286,17 @@ int GamePad::openGamePad(std::string device_name)
             // 判断解码类型
             for (auto it : dev_js)
             {
-                if(it.path==port)
+                if (it.path == port)
                 {
-                    bool is=getdecodeType(it);
+                    bool is = getdecodeType(it);
                     if (!is)
                     {
                         std::cout << "no find decode type" << std::endl;
                         return -1;
-                    }                
+                    }
                     break;
                 }
-            }  
+            }
             return GamePadfd;
         }
     }
@@ -317,7 +317,7 @@ int GamePad::openGamePad(std::string device_name)
             }
         }
     }
-       for (auto it : dev_js)
+    for (auto it : dev_js)
     {
         if (it.path.find(device_name) != std::string::npos)
         {
@@ -435,6 +435,9 @@ void GamePad::Rec()
         case BEITONG:
             decodeBEITONG(js);
             break;
+        case SONY:
+            decodeSony(js);
+            break;
         default:
             break;
         }
@@ -448,7 +451,7 @@ void GamePad::Rec()
 
 bool GamePad::getdecodeType(InputDevice DecodeName)
 {
-    std::cout<<"decode type: ";
+    std::cout << "decode type: ";
     if (DecodeName.name.find("X-Box One pad") != std::string::npos)
     {
         std::cout << "XboxOnePad" << std::endl;
@@ -468,6 +471,11 @@ bool GamePad::getdecodeType(InputDevice DecodeName)
     {
         std::cout << "BEITONG" << std::endl;
         device_type = BEITONG;
+    }
+    else if (DecodeName.name.find("Sony") != std::string::npos)
+    {
+        std::cout << "Sony" << std::endl;
+        device_type = SONY;
     }
     else if (DecodeName.type == "usb")
     {
@@ -899,6 +907,110 @@ void GamePad::decodeBEITONG(js_event js)
             break;
 
         case BEITONG_AXIS_YY:
+            xbox_values.yy = value;
+            break;
+
+        default:
+            break;
+        }
+    }
+}
+
+void GamePad::decodeSony(js_event js)
+{
+    int type, number, value;
+    type = js.type;
+    number = js.number;
+    value = js.value;
+    xbox_values.time = js.time;
+    if (type == JS_EVENT_BUTTON)
+    {
+        switch (number)
+        {
+        case SONY_BUTTON_A:
+            xbox_values.a = value;
+            break;
+
+        case SONY_BUTTON_B:
+            xbox_values.b = value;
+            break;
+
+        case SONY_BUTTON_X:
+            xbox_values.x = value;
+            break;
+
+        case SONY_BUTTON_Y:
+            xbox_values.y = value;
+            break;
+
+        case SONY_BUTTON_LB:
+            xbox_values.lb = value;
+            break;
+
+        case SONY_BUTTON_RB:
+            xbox_values.rb = value;
+            break;
+
+        case SONY_BUTTON_START:
+            xbox_values.start = value;
+            break;
+
+        case SONY_BUTTON_MENU:
+            xbox_values.menu = value;
+            break;
+
+        case SONY_BUTTON_HOME:
+            xbox_values.home = value;
+            break;
+
+        case SONY_BUTTON_LO:
+            xbox_values.lo = value;
+            break;
+
+        case SONY_BUTTON_RO:
+            xbox_values.ro = value;
+            break;
+        case SONY_BUTTON_SCREENSHORT:
+            xbox_values.screenhot = value;
+            break;
+
+        default:
+            break;
+        }
+    }
+    else if (type == JS_EVENT_AXIS)
+    {
+        switch (number)
+        {
+        case SONY_AXIS_LX:
+            xbox_values.lx = value;
+            break;
+
+        case SONY_AXIS_LY:
+            xbox_values.ly = value;
+            break;
+
+        case SONY_AXIS_RX:
+            xbox_values.rx = value;
+            break;
+
+        case SONY_AXIS_RY:
+            xbox_values.ry = value;
+            break;
+
+        case SONY_AXIS_LT:
+            xbox_values.lt = value;
+            break;
+
+        case SONY_AXIS_RT:
+            xbox_values.rt = value;
+            break;
+
+        case SONY_AXIS_XX:
+            xbox_values.xx = value;
+            break;
+
+        case SONY_AXIS_YY:
             xbox_values.yy = value;
             break;
 

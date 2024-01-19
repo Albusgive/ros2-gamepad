@@ -121,3 +121,41 @@
 
 #define BEITONG_BUTTON_VAL_UP -32767
 #define BEITONG_BUTTON_VAL_DOWN 32767
+
+/*SONY*/
+#define SONY_TYPE_BUTTON 0x01
+#define SONY_TYPE_AXIS 0x02
+
+#define SONY_BUTTON_A 0x01
+#define SONY_BUTTON_B 0x02
+#define SONY_BUTTON_X 0x00
+#define SONY_BUTTON_Y 0x03
+#define SONY_BUTTON_LB 0x04
+#define SONY_BUTTON_RB 0x05
+#define SONY_BUTTON_START 0x06
+#define SONY_BUTTON_MENU 0x09
+#define SONY_BUTTON_HOME 0x0C
+#define SONY_BUTTON_LO 0x0A /* 左摇杆按键 */
+#define SONY_BUTTON_RO 0x0B /* 右摇杆按键 */
+
+#define SONY_BUTTON_ON 0x01
+#define SONY_BUTTON_OFF 0x00
+#define SONY_BUTTON_SCREENSHORT 0x0D
+
+#define SONY_AXIS_LX 0x00     /* 左摇杆X轴 */
+#define SONY_AXIS_LY 0x01     /* 左摇杆Y轴 */
+#define SONY_AXIS_RX 0x02     /* 右摇杆X轴 */
+#define SONY_AXIS_RY 0x05     /* 右摇杆Y轴 */
+#define SONY_AXIS_LT 0x03
+#define SONY_AXIS_RT 0x04
+#define SONY_AXIS_XX 0x06 /* 方向键X轴 */
+#define SONY_AXIS_YY 0x07 /* 方向键Y轴 */
+
+#define SONY_AXIS_VAL_UP -32767
+#define SONY_AXIS_VAL_DOWN 32767
+#define SONY_AXIS_VAL_LEFT -32767
+#define SONY_AXIS_VAL_RIGHT 32767
+
+#define SONY_AXIS_VAL_MIN -32767
+#define SONY_AXIS_VAL_MAX 32767
+#define SONY_AXIS_VAL_MID 0x00

@@ -34,7 +34,8 @@ enum DeviceType
     XboxOnePad,
     XboxOneWireless,
     NintendoSwitch,
-    BEITONG
+    BEITONG,
+    SONY
 };
 
 //手柄按键映射
@@ -132,5 +133,6 @@ private:
     void decodeXboxOneWireless(struct js_event js);
     void decodeNintendoSwitch(struct js_event js);
     void decodeBEITONG(struct js_event js);
+    void decodeSony(struct js_event js);
 };
 #endif
