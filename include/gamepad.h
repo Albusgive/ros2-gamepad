@@ -27,7 +27,7 @@ target_link_libraries(your_project/your_node udev)
 #include <libudev.h>
 #include "gamepadkey.h"
 
-//解码类型枚举
+// 解码类型枚举
 enum DeviceType
 {
     NoDevice,
@@ -38,7 +38,7 @@ enum DeviceType
     SONY
 };
 
-//手柄按键映射
+// 手柄按键映射
 struct GamePadValues
 {
     int time = 0;
@@ -48,8 +48,8 @@ struct GamePadValues
     int y = 0;
     int lb = 0;
     int rb = 0;
-    int start = 0;//view
-    int menu = 0;//
+    int start = 0; // view
+    int menu = 0;  //
     int home = 0;
     int screenhot = 0;
     int lo = 0;
@@ -70,11 +70,11 @@ struct InputDevice
     struct udev_device *dev = NULL;
     std::string name = "null";
     std::string type = "null"; // 设备类型usb|2.4G  bluetooth
-    std::string path;          // /dev/input/jsx
+    std::string path = "null"; // /dev/input/jsx
     DeviceType decode_type = NoDevice;
     std::string parent_sysname; // input和event同一个分支标识
-    std::string PID;
-    std::string VID;
+    std::string PID = "null";    //如果是USB设备则有PID和VID
+    std::string VID = "null";
 };
 
 class GamePad
