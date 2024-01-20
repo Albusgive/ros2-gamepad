@@ -1,26 +1,27 @@
 {
-  "configurations": [
-    {
-      "browse": {
-        "databaseFilename": "${default}",
-        "limitSymbolsToIncludedHeaders": false
-      },
-      "includePath": [
-        "/home/rmer/ros_ws/install/serial/include/**",
-        "/home/rmer/Control_scheme/hongying_msg/install/hongying_ctrl_msg/include/**",
-        "/home/rmer/cartographer_ws/install/cartographer_rviz/include/**",
-        "/home/rmer/cartographer_ws/install/cartographer_ros/include/**",
-        "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/include/**",
-        "/opt/ros/humble/include/**",
-        "/home/rmer/ros2-gamepad/src/ros2_gamepad/include/**",
-        "/usr/include/**"
-      ],
-      "name": "ROS",
-      "intelliSenseMode": "gcc-x64",
-      "compilerPath": "/usr/bin/gcc",
-      "cStandard": "gnu11",
-      "cppStandard": "c++14"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "${default}",
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "includePath": [
+                "/home/rmer/ros_ws/install/serial/include/**",
+                "/home/rmer/Control_scheme/hongying_msg/install/hongying_ctrl_msg/include/**",
+                "/home/rmer/cartographer_ws/install/cartographer_rviz/include/**",
+                "/home/rmer/cartographer_ws/install/cartographer_ros/include/**",
+                "/home/rmer/cartographer_ws/install/cartographer_ros_msgs/include/**",
+                "/opt/ros/humble/include/**",
+                "/home/rmer/ros2-gamepad/src/ros2_gamepad/include/**",
+                "/usr/include/**",
+                "${workspaceFolder}/include"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
+        }
+    ],
+    "version": 4
 }

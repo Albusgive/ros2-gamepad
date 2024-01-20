@@ -227,7 +227,7 @@ std::map<std::string, std::string> GamePad::findGamePad()
     return GamePadpads;
 }
 
-void GamePad::xboxpads()
+void GamePad::showGamePads()
 {
     findGamePad();
     if (GamePadpads.empty())

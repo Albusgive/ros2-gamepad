@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
     rclcpp::init(argc, argv);
     auto node = rclcpp::Node::make_shared("gamepad_test_node");
     GamePad pad;
-    pad.xboxpads();
+    pad.showGamePads();
     if (pad.GamePadpads.empty())
     {
         RCLCPP_INFO(node->get_logger(), "No gamepads connected");

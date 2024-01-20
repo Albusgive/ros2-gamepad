@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
     auto pub2 = node->create_publisher<geometry_msgs::msg::Twist>("/turtlesim2/turtle1/cmd_vel", rclcpp::QoS(1));
     geometry_msgs::msg::Twist msg;
     GamePad pad;
-    pad.xboxpads();
+    pad.showGamePads();
     if (pad.GamePadpads.empty())
     {
         RCLCPP_INFO(node->get_logger(), "No gamepads connected");

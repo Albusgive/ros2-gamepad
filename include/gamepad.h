@@ -89,7 +89,7 @@ public:
     /*
     打印搜索到的手柄
     */
-    void xboxpads();
+    void showGamePads();
     std::map<std::string, std::string> GamePadpads;
     /*
     无参数默认开启 0号手柄
